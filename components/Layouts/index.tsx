@@ -1,15 +1,21 @@
 import Header from "./Header"
-import Sidebar from "./Sidebar"
+import SidebarCmp from "./SidebarCmp"
 
 const Layout = ({children} : any) => {
   return (
-    <>
-    <Sidebar/>
-    <div>
+    <div className="flex gap-2 w-full">
+      <div>
+      <SidebarCmp/>
+      </div>
+    
+    <div className="flex-1">
     <Header/>
-    {children}
+    <div className="w-full h-screen bg-[#F9DED7] p-4">
+      {children}
     </div>
-    </>
+    </div>
+    
+    </div>
   )
 }
 

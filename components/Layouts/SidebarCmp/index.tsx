@@ -10,7 +10,6 @@ import {
 } from "react-icons/hi";
 const SidebarCmp = () => {
   return (
-    <div className="bg-[#CCE1F2]">
   <Sidebar aria-label="Default sidebar example">
     <Sidebar.Items>
       <Sidebar.ItemGroup>
@@ -62,7 +61,6 @@ const SidebarCmp = () => {
       </Sidebar.ItemGroup>
     </Sidebar.Items>
   </Sidebar>
-    </div>
   );
 };
 

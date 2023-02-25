@@ -1,3 +1,4 @@
+import Loader from "@/components/reusable/Loader";
 import { Chart } from "react-google-charts";
 
 export const data = [
@@ -29,6 +30,7 @@ const Geo = () => {
       width="100%"
       height="300px"
       data={data}
+      loader={<Loader/>}
     />
   )
 }

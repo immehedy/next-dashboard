@@ -7,8 +7,7 @@ const SidebarCmp = () => {
   console.log({router})
   return (
     <Sidebar aria-label="Default sidebar example">
-      {/* <div className="bg-[#CCE1F2] text-gray-600 font-bold text-xl p-2 text-center rounded-md">Fourbit</div> */}
-      <Sidebar.Logo href="#" img="" imgAlt="" style={{ color: "gray" }}>
+      <Sidebar.Logo href="/" img="" imgAlt="" style={{ color: "gray" }}>
         Fourbit
       </Sidebar.Logo>
       <Sidebar.Items>

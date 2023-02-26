@@ -1,10 +1,13 @@
 import { Table } from "flowbite-react";
+import PaginationCmp from "../reusable/Pagination";
 
 const ProductsPage = () => {
   const arrays = [
     1, 2, 3, 4, 5, 6, 7, 8, 9, 10
   ];
+
   return (
+    <>
     <Table striped={true}>
       <Table.Head>
         <Table.HeadCell>Product name</Table.HeadCell>
@@ -37,6 +40,8 @@ const ProductsPage = () => {
         ))}
       </Table.Body>
     </Table>
+    <PaginationCmp/>
+    </>
   );
 };
 

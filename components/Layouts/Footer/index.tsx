@@ -1,5 +1,3 @@
-import React from 'react'
-
 const Footer = () => {
   return (
     <div className='w-full flex gap-1 justify-center py-2'>

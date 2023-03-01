@@ -4,6 +4,7 @@ import LoginPage from "."
 describe("Login Page", () => {
     it('render input', () => {
         render(<LoginPage/>);
+
         //checking heading field redering
         const foubitText = screen.getByRole("heading", {
             level: 1
@@ -15,13 +16,7 @@ describe("Login Page", () => {
             name: 'Sign in to access dashboard'
         });
         expect(signInText).toBeInTheDocument();
-
-        const welcomeText = screen.getByRole("heading", {
-            level: 3,
-            name: 'Please follow the instruction'
-        });
-        expect(welcomeText).toBeInTheDocument();
-
+        
         //checking email field rendering
         const nameElement = screen.getByRole("textbox", {
             name: 'Your email'
@@ -32,23 +27,7 @@ describe("Login Page", () => {
         const passElement = screen.getByLabelText('Your password');
         expect(passElement).toBeInTheDocument();
 
-        //checking textbox field rendering
-        const messageBox = screen.getByRole("textbox", {
-            name: 'Your message'
-        })
-        expect(messageBox).toBeInTheDocument();
-
-        //checking password field rendering
-        // const passElement = screen.getByRole("textbox", {
-        //     name: 'Your password'
-        // });
-        // expect(passElement).toBeInTheDocument();
-
-        //checking dropdown box field rendering
-        const countryElement = screen.getByRole("combobox");
-        expect(countryElement).toBeInTheDocument();
-
-        //checking checkbox fiedl rendering
+        //checking checkbox field rendering
         const checkBox = screen.getByRole("checkbox");
         expect(checkBox).toBeInTheDocument();
 

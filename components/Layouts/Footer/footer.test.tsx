@@ -13,9 +13,9 @@ describe('Dashboard Footer', () => {
         render(<Footer/>)
         expect(screen.getByRole("link")).toHaveTextContent("fourbit.io")
     })
-    // it('should contain current year', () => {
-    //     const currentYear = new Date().getFullYear() + '';
-    //     render(<Footer/>)
-    //     expect(screen.getByTestId("curr-year")).toHaveTextContent(currentYear)
-    // })
+    it('should contain current year', () => {
+        const currentYear = new Date().getFullYear() + '';
+        render(<Footer/>)
+        expect(screen.getByTestId("curr-year")).toHaveTextContent(currentYear)
+    })
 })

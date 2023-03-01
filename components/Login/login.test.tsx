@@ -28,6 +28,10 @@ describe("Login Page", () => {
         });
         expect(nameElement).toBeInTheDocument();
 
+        //checking password field rendering
+        const passElement = screen.getByLabelText('Your password');
+        expect(passElement).toBeInTheDocument();
+
         //checking textbox field rendering
         const messageBox = screen.getByRole("textbox", {
             name: 'Your message'

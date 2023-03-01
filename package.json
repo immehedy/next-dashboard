@@ -8,8 +8,8 @@
     "start": "next start",
     "lint": "next lint",
     "commit": "git-cz",
-    "test" : "jest",
-    "coverage" : "jest --coverage"
+    "test": "jest",
+    "coverage": "jest --coverage"
   },
   "dependencies": {
     "@types/node": "18.14.1",
@@ -40,6 +40,16 @@
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
+    },
+    "jest": {
+      "coverageThreshold": {
+        "global": {
+          "branches": 70,
+          "functions": 70,
+          "lines": 70,
+          "statements": 70
+        }
+      }
     }
   }
 }

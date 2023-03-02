@@ -1,11 +1,13 @@
+import { handleSignIn, handleSignOut, currentUser } from "./useLogin";
 const LoginPage = () => {
+
   return (
     <div className="w-full md:w-1/3 border shadow-md z-50 bg-white p-10 mx-auto md:mt-[10%] rounded-md">
         <div className="text-center my-4">
         <h1 className="text-xl text-gray-600 font-bold">Fourbit</h1>
         <h3 className="text-sm text-gray-400">Sign in to access dashboard</h3>
         </div>
-      <form>
+      <form onSubmit={(e) => {e.preventDefault(); handleSignIn("dev.mehedy.hassan@gmail.com", "12345678")}}>
         <div className="mb-6">
           <label
             htmlFor="email"

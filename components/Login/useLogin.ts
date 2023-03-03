@@ -1,8 +1,12 @@
 import { auth } from "@/firebase/clientApp";
-
+type formType = {
+  email : string,
+  password: string
+}
 
 // Handle sign in
-export const handleSignIn = async (email : string, password: string) => {
+export const handleSignIn = async (formData : formType) => {
+  const {email, password} = formData;
   try {
     const userCredential = await auth.signInWithEmailAndPassword(email, password);
     const user = userCredential.user;

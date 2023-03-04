@@ -22,6 +22,7 @@ describe('counter', () => {
         expect(initialValue).toHaveTextContent("0");
     })
     it('increase value from 0 to 1', async () => {
+        user.setup();
         render(<CounterPage/>)
         const incrementBtn = screen.getByRole("button", {
             name: 'increment'
@@ -31,6 +32,7 @@ describe('counter', () => {
         expect(renderedElement).toHaveTextContent("1");
     })
     it('increase value from 0 to 2 after clicking twice', async () => {
+        user.setup();
         render(<CounterPage/>);
         const incrementBtn = screen.getByRole("button", {
             name: 'increment'

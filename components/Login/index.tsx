@@ -1,11 +1,18 @@
+import { useState } from "react";
+import { handleSignIn, handleSignOut, currentUser } from "./useLogin";
 const LoginPage = () => {
+  const [formData, setFormData] = useState({
+    email: '',
+    password: '',
+  })
   return (
     <div className="w-full md:w-1/3 border shadow-md z-50 bg-white p-10 mx-auto md:mt-[10%] rounded-md">
         <div className="text-center my-4">
         <h1 className="text-xl text-gray-600 font-bold">Fourbit</h1>
         <h3 className="text-sm text-gray-400">Sign in to access dashboard</h3>
         </div>
-      <form>
+        {/* onSubmit={(e) => {e.preventDefault(); handleSignIn(formData)}} */}
+      <form >
         <div className="mb-6">
           <label
             htmlFor="email"
@@ -18,6 +25,7 @@ const LoginPage = () => {
             className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
             placeholder="name@flowbite.com"
             required
+            onChange={(e) => setFormData({...formData, 'email': e.target.value})}
           />
         </div>
         <div className="mb-6">
@@ -31,6 +39,7 @@ const LoginPage = () => {
             id="password"
             className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
             required
+            onChange={(e) => setFormData({...formData, 'password' : e.target.value})}
           />
         </div>
         <div className="flex items-start mb-6">

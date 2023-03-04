@@ -11,7 +11,8 @@ const LoginPage = () => {
         <h1 className="text-xl text-gray-600 font-bold">Fourbit</h1>
         <h3 className="text-sm text-gray-400">Sign in to access dashboard</h3>
         </div>
-      <form onSubmit={(e) => {e.preventDefault(); handleSignIn(formData)}}>
+        {/* onSubmit={(e) => {e.preventDefault(); handleSignIn(formData)}} */}
+      <form >
         <div className="mb-6">
           <label
             htmlFor="email"
